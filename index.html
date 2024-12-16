@@ -12,7 +12,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
 
+<style>
+  .workshop-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}
 
+.workshop-item {
+  background-color: #f97316;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.robot-image {
+  width: 100%;
+  height: auto;
+}
+
+</style>
 </head>
 <body class="bg-black text-white font-inter">
 
@@ -25,7 +48,7 @@
 
      <div class="flex items-end justify-between w-full h-96" >
       <button style="background: #ff570c;" class="p-6 px-24 text-2xl font-bold">GET EARLY TICKET</button>
-      <p class="w-1/4">            Talks, networking, activities, and parties. Learn from top-tier industry leaders, connect with like-minded individuals, and explore the latest trends in the digital industry.
+      <p class="w-1/4 text-xs font-light">            Talks, networking, activities, and parties. Learn from top-tier industry leaders, connect with like-minded individuals, and explore the latest trends in the digital industry.
       </p>
      </div>
    
@@ -77,6 +100,19 @@
   </div>
 
 
+
+
+  <div class="w-full bg-red-500 w-screen flex items-center justify-center">
+    <div class="workshop-layout">
+      <div class="workshop-item">Workshop On Ros</div>
+      <div class="workshop-item">Workshop On Ros</div>
+      <div class="workshop-item">Workshop On Ros</div>
+      <div class="workshop-item">Workshop On Ros</div>
+      <div><img src="/api/placeholder/300/300" alt="Robot" class="robot-image"></div>
+      <div class="workshop-item">Workshop On Ros</div>
+    </div>
+
+  </div>
 
 <!-- pricing -->
   <!-- <div class="flex flex-col items-center justify-center min-h-screen">
