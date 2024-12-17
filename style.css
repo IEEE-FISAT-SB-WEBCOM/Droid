@@ -1,6 +1,8 @@
 .posters {
     display: flex;
     flex-direction: row;
+    padding: 50px;
+    background: #f97316;
     gap: 35px;
     margin: 50px;
     width: 100%;
