@@ -1,28 +1,65 @@
 .posters {
-    display: flex;
-    flex-direction: row;
-    padding: 50px;
-    background: #f97316;
-    gap: 35px;
-    margin: 50px;
-    width: 100%;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 20px;
-  }
-  .posters img {
-    max-height: 350px;
-    max-width: 350px;
-    width: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  background: #f97316;
+  gap: 35px;
+  margin: 50px;
+  width: 100%;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+.posters img {
+  max-height: 350px;
+  max-width: 350px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 2px dotted white;
+}
+.posters img {
+  max-height: 400px;
+  max-width: 400px;
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+
+#robot {
+  width: 850px;
+  height: 700px;
+  z-index: 2;
+  margin-top: -250px;
+}
+
+#icon {
+  width: 350px;
+  height: 250px;
+  z-index: 1;
+  position: relative;
+}
+
+#heroicon{
+  width: auto; height: 150px;
+}
+
+
+
+@media (max-width: 768px) {
+  #heroicon{
+    width: 300px;
     height: auto;
-    object-fit: contain;
-    border: 2px dotted white;  
-  
   }
-    .posters img {
-      max-height: 400px;
-      max-width: 400px;
-      scroll-snap-align: start;
-      flex: 0 0 auto;
-    }
+
+  #icon{
+    width: 200px;
+    height: 150px;
+    bottom: 100px;
+  }
+  #robot {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 50px;
+  }
+}

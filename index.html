@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="style.css">
 
 <style>
+  html,body{
+    overflow-x: hidden;
+  }
   .workshop-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -36,28 +39,98 @@
   height: auto;
 }
 
+.marquee-container {
+            width: 100%;
+            height: 80px;
+            background-color: #ff570c;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .marquee-content {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+        .logo-item {
+            height: 70px;
+            margin: 0 40px; /* Increased horizontal spacing */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-item img {
+            max-height: 70px;
+            max-width: 150px;
+            object-fit: contain;
+        }
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+
+
+        /* Conclave */
+        .marquee-containerr {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 2.5rem;
+            white-space: nowrap;
+        }
+        .marqueee {
+            display: inline-block;
+            animation: marqueee 50s linear infinite;
+            font-size: 100px;
+            font-family: 'Clash Display', sans-serif;
+            word-spacing: 14px;
+            letter-spacing: 33px;
+        }
+        @keyframes marqueee {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
 </style>
 </head>
-<body class="bg-black text-white font-inter">
+<body class="bg-black text-white font-inter space-y-20">
+
 
   <div class="h-screen w-screen flex justify-center">
     <div style="border: 2px solid #ff570c; background:#171717; width: 90%;" class=" flex flex-col items-center mt-6 h-4/5  p-6 space-y-6">
-     <img src="Frame 4.png" alt="logo" style="width: auto; height: 150px;">
-     <h1 class="text-3xl">8th And 9th February 2024</h1>
-     <h1 class="text-xl font-thin">Federal Institute Of Science and Technology, Angamaly</h1>
+     <img src="Frame 4.png" alt="logo" id="heroicon">
+     <h1 class="text-xl md:text-3xl">8th And 9th February 2024</h1>
+     <h1 class="text-xs md:text-xl font-thin">Federal Institute Of Science and Technology, Angamaly</h1>
      
 
      <div class="flex items-end justify-between w-full h-96" >
-      <button style="background: #ff570c;" class="p-4 px-24 text-2xl font-bold">GET EARLY TICKET</button>
-      <p class="w-1/4 text-xs font-light">            Talks, networking, activities, and parties. Learn from top-tier industry leaders, connect with like-minded individuals, and explore the latest trends in the digital industry.
-      </p>
+       <button style="background: #ff570c;" class="p-4 px-20 text-2xl font-bold">GET EARLY TICKET</button>
+      
+      <div class="w-1/4 text-xs font-light space-y-3">      
+        <img src="SVG.png">     
+        <p> Talks, networking, activities, and parties. Learn from top-tier industry leaders, connect with like-minded individuals, and explore the latest trends in the digital industry.</p>
+      </div>
      </div>
    
-      <!-- <img src="Frame 429.png" height="600" width="600" alt="Droid Event Image"> -->
+     <img src="Frame 429.png" height="900" width="700" alt="Droid Event Image" class="absolute top-60">
     </div>
 
     </div>
-
   
 
     </div>
@@ -65,22 +138,46 @@
 
   
 
-    <div class="w-full h-16 mb-20 py-4" style="background-color: #ff570c; height: 80px;">
-      <div class="flex justify-evenly items-center logo h-full">
-        <img src="logokc_white.png" alt="Image 1" class="h-full" style="width: 70px; height: 70px;">
-        <img src="PES_white.png" alt="Image 2" class="h-full" style="width: 70px; height: 70px;">
-        <img src="ieee-comsoc_white.png" alt="Image 3" class="h-full" style="width: 100px; height: 50px;">
-        <img src="IEEE-CS_LogoTM_bwhite.png" alt="Image 4" class="h-full cs" style="width: 150px; height: 50px;">
-        <img src="wie-logo_white.png" alt="Image 5" class="h-full" style="width: 70px; height: 60px;">
-      </div>
-
-
+  <div class="marquee-container">
+    <div class="marquee-content">
+        <div class="logo-item">
+            <img src="logokc_white.png" alt="Image 1">
+        </div>
+        <div class="logo-item">
+            <img src="PES_white.png" alt="Image 2">
+        </div>
+        <div class="logo-item">
+            <img src="ieee-comsoc_white.png" alt="Image 3">
+        </div>
+        <div class="logo-item">
+            <img src="IEEE-CS_LogoTM_bwhite.png" alt="Image 4">
+        </div>
+        <div class="logo-item">
+            <img src="wie-logo_white.png" alt="Image 5">
+        </div>
+        
+        <!-- Duplicate logos for seamless scrolling -->
+        <div class="logo-item">
+            <img src="logokc_white.png" alt="Image 1">
+        </div>
+        <div class="logo-item">
+            <img src="PES_white.png" alt="Image 2">
+        </div>
+        <div class="logo-item">
+            <img src="ieee-comsoc_white.png" alt="Image 3">
+        </div>
+        <div class="logo-item">
+            <img src="IEEE-CS_LogoTM_bwhite.png" alt="Image 4">
+        </div>
+        <div class="logo-item">
+            <img src="wie-logo_white.png" alt="Image 5">
+        </div>
     </div>
-
+</div>
 
   
   
-  <div style="height: 700px; line-height: 40px;" class="w-full flex flex-col justify-start  py-12 px-6">
+  <div style=" line-height: 40px; " class="w-full h-auto md:h-[700px] flex flex-col justify-start  py-12 px-6">
     <div class="w-4/5 mx-auto">
 
       <div class="space-y-24">
@@ -90,7 +187,7 @@
           <p class="mt-4">
             DROID 4.0 Is A National Conclave On Robotics And The Flagship Event Hosted By IEEE Federal Inst Of Science And Technology Student Branch. It Will Be A Technological Event That Can Help You Take A Trip To A Roboplanet. The Event Consists Of A Number Of Inspirational And Influential Speakers, Technical Experts, Technical Workshops, And Much More Thrilling And Breath-Holding Events.
           </p>
-          <button style="background-color: #ff570c;" class="bg-[#ff570c] hover:bg-orange-600 text-white py-2 px-4  mt-4">
+          <button style="background-color: #ff570c;" class="bg-[#ff570c] hover:bg-orange-600 text-white py-2 px-10  mt-4">
             Download Brochure
           </button>
         </div>
@@ -122,58 +219,135 @@
 
   </div>
 
-<!-- pricing -->
-  <!-- <div class="flex flex-col items-center justify-center min-h-screen">
-    <div class="text-4xl font-bold mb-10">Pricing.</div>
-    <div class="flex justify-center space-x-6">
-        <div class="bg-white text-black p-6  shadow-lg w-80 text-center">
-            <h2 class="text-2xl font-bold mb-4">Starter</h2>
-            <p class="text-4xl font-bold mb-6">$5.00</p>
-            <p class="mb-2">Per Month</p>
-            <hr>
-            <ul class="mb-6">
-                <li class="mb-2">3 Social Media Account</li>
-                <li class="mb-2">Free Platform Access</li>
-                <li class="mb-2">24/7 Customer Support</li>
-            </ul>
-            <button class="bg-black text-white px-4 py-2 rounded-lg">Get Started</button>
+
+
+  <!-- Pricing -->
+
+<div class="w-screen flex flex-col items-center justify-center">
+  <div class="w-4/5 flex flex-col items-start">
+    <h1 class="text-6xl mb-16">Pricing.</h1>
+    <div
+      class="w-full flex items-center justify-evenly h-auto overflow-x-auto space-x-4 md:justify-evenly"
+      style="scroll-snap-type: x mandatory;"
+
+      >
+      <div class="bg-white text-black p-8 h-96 w-80 shadow-lg relative flex-shrink-0" style="scroll-snap-align: start;">
+        <div style="position: absolute; inset: 0; backdrop-filter: blur(200px); display: flex; flex-direction: column; padding: 2rem;">
+          <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; filter: blur(5px);">Premium</h3>
+          <p style="font-size: 2.5rem; font-weight: 700; filter: blur(5px);">₹000.00</p>
+          <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem; filter: blur(5px);">Per Month</p>
+          <ul style="font-size: 0.875rem; margin-bottom: 1.5rem;">
+            <li style="display: flex; align-items: center; margin-bottom: 0.5rem; filter: blur(5px);">
+              <span style="color: #22c55e; margin-right: 0.5rem;">✔</span> 10 Social Media Account
+            </li>
+            <li style="display: flex; align-items: center; margin-bottom: 0.5rem; filter: blur(5px);">
+              <span style="color: #22c55e; margin-right: 0.5rem;">✔</span> Free Platform Access
+            </li>
+            <li style="display: flex; align-items: center; filter: blur(5px);">
+              <span style="color: #22c55e; margin-right: 0.5rem;">✔</span> 24/7 Customer Support
+            </li>
+          </ul>
         </div>
-        <div class="bg-yellow-500 p-6  shadow-lg w-80 text-center">
-            <h2 class="text-2xl font-bold mb-4">Basic</h2>
-            <p class="text-4xl font-bold mb-6">$45.00</p>
-            <p class="mb-2">Per Month</p>
-            <hr>
-            <ul class="mb-6 ">
-                <li class="mb-2">5 Social Media Account</li>
-                <li class="mb-2">Free Platform Access</li>
-                <li class="mb-2">24/7 Customer Support</li>
-            </ul>
-            <button class="bg-black text-white px-4 py-2 rounded-lg">Get Started</button>
+        <div style="position: absolute; bottom: 2rem; left: 30%; transform: translateX(-50%);">
+          <button
+            style="
+              z-index: 10;
+              border: 1px solid black;
+              padding: 0.5rem 1.5rem;
+              border-radius: 0.375rem;
+              font-weight: 600;
+              transition: background-color 0.2s, color 0.2s;
+            "
+            onmouseover="this.style.backgroundColor='black'; this.style.color='white';"
+            onmouseout="this.style.backgroundColor=''; this.style.color='';"
+          >
+            Revealing Soon
+          </button>
         </div>
-        <div class="bg-white text-black p-6  shadow-lg w-80 text-center">
-            <h2 class="text-2xl font-bold mb-4">Premium</h2>
-            <p class="text-4xl font-bold mb-6">$230.00</p>
-            <p class="mb-2">Per Month</p>
-            <hr>
-            <ul class="mb-6 ">
-                <li class="mb-2">10 Social Media Account</li>
-                <li class="mb-2">Free Platform Access</li>
-                <li class="mb-2">24/7 Customer Support</li>
-            </ul>
-            <button class="bg-black text-white px-4 py-2 rounded-lg">Get Started</button>
+      </div>
+
+      <div style="background: #ffa075;" class="text-black p-8 h-96 w-80 shadow-lg relative flex-shrink-0" style="scroll-snap-align: start;">
+        <div style="position: absolute; inset: 0; backdrop-filter: blur(200px); display: flex; flex-direction: column; padding: 2rem;">
+          <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; filter: blur(5px);">Premium</h3>
+          <p style="font-size: 2.5rem; font-weight: 700; filter: blur(5px);">₹000.00</p>
+          <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem; filter: blur(5px);">Per Month</p>
+          <ul style="font-size: 0.875rem; margin-bottom: 1.5rem;">
+            <li style="display: flex; align-items: center; margin-bottom: 0.5rem; filter: blur(5px);">
+              <span style="color: #22c55e; margin-right: 0.5rem;">✔</span> 10 Social Media Account
+            </li>
+            <li style="display: flex; align-items: center; margin-bottom: 0.5rem; filter: blur(5px);">
+              <span style="color: #22c55e; margin-right: 0.5rem;">✔</span> Free Platform Access
+            </li>
+            <li style="display: flex; align-items: center; filter: blur(5px);">
+              <span style="color: #22c55e; margin-right: 0.5rem;">✔</span> 24/7 Customer Support
+            </li>
+          </ul>
         </div>
+        <div style="position: absolute; bottom: 2rem; left: 30%; transform: translateX(-50%);">
+          <button
+            style="
+              z-index: 10;
+              background: #000;
+              color: white;
+              padding: 0.5rem 1.5rem;
+              border-radius: 0.375rem;
+              font-weight: 600;
+              transition: background-color 0.2s, color 0.2s;
+            "
+            onmouseover="this.style.backgroundColor='white'; this.style.color='black';"
+            onmouseout="this.style.backgroundColor='black'; this.style.color='white';"
+          >
+            Revealing Soon
+          </button>
+        </div>
+      </div> <div class="bg-white text-black p-8 h-96 w-80 shadow-lg relative flex-shrink-0" style="scroll-snap-align: start;">
+        <div style="position: absolute; inset: 0; backdrop-filter: blur(200px); display: flex; flex-direction: column; padding: 2rem;">
+          <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; filter: blur(5px);">Premium</h3>
+          <p style="font-size: 2.5rem; font-weight: 700; filter: blur(5px);">₹000.00</p>
+          <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem; filter: blur(5px);">Per Month</p>
+          <ul style="font-size: 0.875rem; margin-bottom: 1.5rem;">
+            <li style="display: flex; align-items: center; margin-bottom: 0.5rem; filter: blur(5px);">
+              <span style="color: #22c55e; margin-right: 0.5rem;">✔</span> 10 Social Media Account
+            </li>
+            <li style="display: flex; align-items: center; margin-bottom: 0.5rem; filter: blur(5px);">
+              <span style="color: #22c55e; margin-right: 0.5rem;">✔</span> Free Platform Access
+            </li>
+            <li style="display: flex; align-items: center; filter: blur(5px);">
+              <span style="color: #22c55e; margin-right: 0.5rem;">✔</span> 24/7 Customer Support
+            </li>
+          </ul>
+        </div>
+        <div style="position: absolute; bottom: 2rem; left: 30%; transform: translateX(-50%);">
+          <button
+            style="
+              z-index: 10;
+              border: 1px solid black;
+              padding: 0.5rem 1.5rem;
+              border-radius: 0.375rem;
+              font-weight: 600;
+              transition: background-color 0.2s, color 0.2s;
+            "
+            onmouseover="this.style.backgroundColor='black'; this.style.color='white';"
+            onmouseout="this.style.backgroundColor=''; this.style.color='';"
+          >
+            Revealing Soon
+          </button>
+        </div>
+      </div>
+   
+
+     
     </div>
-    <div class="text-4xl font-bold mt-10">Contact</div>
-</div> -->
-
-
-
-
-  <div class="w-screen flex justify-center items-center pl-10">
-    <h1 style="font-size: 100px; margin: auto;">
-      <span style="display: inline-block; word-spacing: 14px; letter-spacing: 33px; font-family: 'Clash Display', sans-serif;">National Conclave</span>
-    </h1>
   </div>
+</div>
+
+
+
+<div class="marquee-containerr">
+  <div class="marqueee">
+      National Conclave National Conclave National Conclave National Conclave National Conclave National Conclave
+  </div>
+</div>
   <section>
     <h1 class="text-6xl font-bold text-white my-36">Posters</h1>
     <div class="posters">
@@ -191,7 +365,7 @@
 <!-- Contact -->
 <div class="w-screen flex justify-center items-center bg-black flex-col min-h-screen pb-36">
   <div class="w-4/5 flex flex-col items-start p-6 space-y-6">
-      <h1 class="text-6xl font-bold text-white my-36">Contact</h1>
+      <h1 class="text-4xl md:text-6xl font-bold text-white my-36">Contact</h1>
       <div class="w-full flex flex-col items-center space-y-6">
           <div class="flex justify-evenly w-full">
               <a href="https://www.instagram.com/ieeefisatsb/" target="_blank" rel="noopener noreferrer">
@@ -221,8 +395,9 @@
               </a>
           </div>
           
-          <div class="map w-full h-96 bg-gray-200 mt-20 flex items-center justify-center">
+          <div class="map w-full h-60 md:h-96 bg-gray-200 flex items-center justify-center">
               <iframe
+              id="map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.3724180597765!2d76.40626477532166!3d10.231517589886055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08068aa17bd247%3A0xf048b9ebcbd2af28!2sFederal%20Institute%20of%20Science%20And%20Technology%20(FISAT)%C2%AE!5e0!3m2!1sen!2sin!4v1715874732686!5m2!1sen!2sin"
                 style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -234,9 +409,14 @@
 
 <!-- Footer -->
 <div style="width: 100%; background-color: black; height: auto; padding-top: 4rem; padding-bottom: 4rem; display: flex; flex-direction: column; align-items: center;">
-  <img src="Union.png" alt="logo" style="width: 350px; height: 250px; z-index: 1; position: relative;">
-  <img src="Frame 429.png" alt="logo" style="width: 850px; height: 700px; z-index: 2; margin-top: -250px;">
+  <img src="Union.png" id="icon" alt="logo">
+  <img src="Frame 429.png" id="robot" alt="logo">
 </div>
+
+
+
+
+
 
 
  <script>
