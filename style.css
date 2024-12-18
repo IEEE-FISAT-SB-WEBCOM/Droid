@@ -46,11 +46,10 @@
 
 
 
+
+
 @media (max-width: 768px) {
-  #heroicon{
-    width: 300px;
-    height: auto;
-  }
+
 
   #icon{
     width: 200px;
