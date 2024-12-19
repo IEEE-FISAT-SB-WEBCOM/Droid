@@ -212,6 +212,17 @@ html,body{
 }
 
 
+#hamburger-menu.active div:first-child {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#hamburger-menu.active div:last-child {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#menu-overlay.active {
+  width: 100%;
+}
 
 
 @media (max-width: 1024px) {
