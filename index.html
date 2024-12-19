@@ -12,73 +12,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
 
 <style>
-  html,body{
-    overflow-x: hidden;
-  }
-  .workshop-layout {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 16px;
-}
-
-.workshop-item {
-  background-color: #f97316;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.robot-image {
-  width: 100%;
-  height: auto;
-}
-
-.marquee-container {
-            width: 100%;
-            height: 80px;
-            background-color: #ff570c;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .marquee-content {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            white-space: nowrap;
-            animation: marquee 20s linear infinite;
-        }
-        .marquee-content:hover {
-            animation-play-state: paused;
-        }
-        .logo-item {
-            height: 70px;
-            margin: 0 40px; /* Increased horizontal spacing */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo-item img {
-            max-height: 70px;
-            max-width: 150px;
-            object-fit: contain;
-        }
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
 
 
         /* Conclave */
@@ -112,22 +51,22 @@
 
 
   <div class="h-screen w-screen flex justify-center">
-    <div style="border: 2px solid #ff570c; background:#171717; width: 90%;" class=" flex flex-col items-center mt-6 h-4/5  p-6 space-y-6">
-     <img src="Frame 4.png" alt="logo" id="heroicon">
+    <div style="border: 2px solid #ff570c; background:#171717; width: 90%;" class=" flex flex-col items-center mt-6 h-4/5   p-6 space-y-6">
+     <img src="img/Frame 4.png" alt="logo" id="heroicon">
      <h1 class="text-xl md:text-3xl">8th And 9th February 2024</h1>
-     <h1 class="text-xs md:text-xl font-thin">Federal Institute Of Science and Technology, Angamaly</h1>
+     <h1 class="text-xs md:text-xl font-thin ">Federal Institute Of Science and Technology, Angamaly</h1>
      
 
-     <div class="flex flex-col items-center md:flex-row  md:items-end  bg-white justify-between w-full h-96" >
+     <div style="height: 800px;" class="flex flex-col items-center  md:py-0 md:flex-row   md:items-end justify-between w-full md:h-96" >
        <button style="background: #ff570c;" class="p-2 px-12 md:p-4 md:px-20 text-lg  md:text-2xl font-bold">GET EARLY TICKET</button>
       
       <div class="w-full md:w-1/4 text-xs font-light space-y-3">      
-        <img src="SVG.png">     
+        <img src="img/SVG.png">     
         <p> Talks, networking, activities, and parties. Learn from top-tier industry leaders, connect with like-minded individuals, and explore the latest trends in the digital industry.</p>
       </div>
      </div>
    
-     <img src="Frame 429.png" id="herorobo" height="900" width="700" alt="Droid Event Image" class="absolute top-60">
+     <img src="img/Frame 429.png" id="herorobo" alt="Droid Event Image" class="absolute top-60">
     </div>
 
     </div>
@@ -138,25 +77,55 @@
 
   
 
-  <div class="w-full h-16 mb-20 py-4" style="background-color: #ff570c; height: 80px;">
+  <!-- <div class="w-full h-16 mb-20 py-4" style="background-color: #ff570c; height: 80px;">
     <div class="flex justify-evenly items-center logo h-full">
-    <img src="logokc_white.png" alt="Image 1" class="h-full" style="width: 70px; height: 70px;">
-    <img src="PES_white.png" alt="Image 2" class="h-full" style="width: 70px; height: 70px;">
-    <img src="ieee-comsoc_white.png" alt="Image 3" class="h-full" style="width: 100px; height: 50px;">
-    <img src="IEEE-CS_LogoTM_bwhite.png" alt="Image 4" class="h-full cs" style="width: 150px; height: 50px;">
-    <img src="wie-logo_white.png" alt="Image 5" class="h-full" style="width: 70px; height: 60px;">
+    <img src="img/logokc_white.png" alt="Image 1" class="h-full" style="width: 70px; height: 70px;">
+    <img src="img/PES_white.png" alt="Image 2" class="h-full" style="width: 70px; height: 70px;">
+    <img src="img/ieee-comsoc_white.png" alt="Image 3" class="h-full" style="width: 100px; height: 50px;">
+    <img src="img/IEEE-CS_LogoTM_bwhite.png" alt="Image 4" class="h-full cs" style="width: 150px; height: 50px;">
+    <img src="img/wie-logo_white.png" alt="Image 5" class="h-full" style="width: 70px; height: 60px;">
     </div>
-    </div>
+    </div> -->
 
   
+
+
+
+    <div class="marquee-wrapper" style="background-color: #ff570c; height: 80px; overflow: hidden;">
+      <div class="marquee">
+        <div class="marquee-content">
+          <img src="img/logokc_white.png" alt="Image 1" class="logo-img">
+          <img src="img/PES_white.png" alt="Image 2" class="logo-img">
+          <img src="img/ieee-comsoc_white.png" alt="Image 3" class="logo-img">
+          <img src="img/IEEE-CS_LogoTM_bwhite.png" alt="Image 4" class="logo-img">
+          <img src="img/wie-logo_white.png" alt="Image 5" class="logo-img">
+        </div>
+        <div class="marquee-content">
+          <img src="img/logokc_white.png" alt="Image 1" class="logo-img">
+          <img src="img/PES_white.png" alt="Image 2" class="logo-img">
+          <img src="img/ieee-comsoc_white.png" alt="Image 3" class="logo-img">
+          <img src="img/IEEE-CS_LogoTM_bwhite.png" alt="Image 4" class="logo-img">
+          <img src="img/wie-logo_white.png" alt="Image 5" class="logo-img">
+        </div>
+      </div>
+    </div>
+    
   
+
+    
+
+
+
+
+
+    <!-- About -->
   <div style=" line-height: 40px; " class="w-full h-auto md:h-[700px] flex flex-col justify-start  py-12 px-6">
     <div class="w-4/5 mx-auto">
 
       <div class="space-y-24">
         
         <div>
-          <h1 class="text-4xl font-bold">About Event.</h1>
+          <h1 class="text-6xl font-bold">About Event.</h1>
           <p class="mt-4">
             DROID 4.0 Is A National Conclave On Robotics And The Flagship Event Hosted By IEEE Federal Inst Of Science And Technology Student Branch. It Will Be A Technological Event That Can Help You Take A Trip To A Roboplanet. The Event Consists Of A Number Of Inspirational And Influential Speakers, Technical Experts, Technical Workshops, And Much More Thrilling And Breath-Holding Events.
           </p>
@@ -166,7 +135,7 @@
         </div>
         
         <div>
-          <h1 class="text-4xl font-bold">About FISAT.</h1>
+          <h1 class="text-6xl font-bold">About FISAT.</h1>
           <p class="mt-4">
             DROID 4.0 Is A National Conclave On Robotics And The Flagship Event Hosted By IEEE Federal Inst Of Science And Technology Student Branch. It Will Be A Technological Event That Can Help You Take A Trip To A Roboplanet. The Event Consists Of A Number Of Inspirational And Influential Speakers, Technical Experts, Technical Workshops, And Much More Thrilling And Breath-Holding Events.
           </p>
@@ -179,24 +148,30 @@
 
 
 
+<!-- Workshops -->
+ <div class="w-screen flex items-center justify-center">
 
-  <div class="w-full bg-red-500 w-screen flex items-center justify-center">
-    <div class="workshop-layout">
-      <div class="workshop-item">Workshop On Ros</div>
-      <div class="workshop-item">Workshop On Ros</div>
-      <div class="workshop-item">Workshop On Ros</div>
-      <div class="workshop-item">Workshop On Ros</div>
-      <div><img src="/api/placeholder/300/300" alt="Robot" class="robot-image"></div>
-      <div class="workshop-item">Workshop On Ros</div>
+
+     <div class="inner-container">
+       <h1 class="title text-6xl">Workshops.</h1>
+       <div class="workshop-layout">
+         <div class="workshop-item">Workshop On Ros</div>
+         <div class="workshop-item">Workshop On Ros</div>
+         <div class="workshop-item">Workshop On Ros</div>
+         <div class="workshop-item">Workshop On Ros</div>
+         <div class="img-container">
+           <img src="img/Frame 429.png" alt="Robot" class="robot-image">
+          </div>
+          <div class="workshop-item">Workshop On Ros</div>
+          <div class="workshop-item last-item">Workshop On Ros</div>
+        </div>
+      </div>
     </div>
 
-  </div>
-
-
-
+    
   <!-- Pricing -->
 
-<div class="w-screen flex flex-col items-center justify-center">
+<div id="Pricing" class="w-screen flex flex-col items-center justify-center">
   <div class="w-4/5 flex flex-col items-start">
     <h1 class="text-6xl mb-16">Pricing.</h1>
     <div
@@ -204,7 +179,7 @@
       style="scroll-snap-type: x mandatory;"
 
       >
-      <div class="bg-white text-black p-8 h-96 w-80 shadow-lg relative flex-shrink-0" style="scroll-snap-align: start;">
+      <div class="bg-white pricing-card text-black p-8 h-96 w-80 shadow-lg relative flex-shrink-0" style="scroll-snap-align: start;">
         <div style="position: absolute; inset: 0; backdrop-filter: blur(200px); display: flex; flex-direction: column; padding: 2rem;">
           <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; filter: blur(5px);">Premium</h3>
           <p style="font-size: 2.5rem; font-weight: 700; filter: blur(5px);">₹000.00</p>
@@ -239,7 +214,7 @@
         </div>
       </div>
 
-      <div style="background: #ffa075;" class="text-black p-8 h-96 w-80 shadow-lg relative flex-shrink-0" style="scroll-snap-align: start;">
+      <div style="background: #ffa075;" class="text-black pricing-card p-8 h-96 w-80 shadow-lg relative flex-shrink-0" style="scroll-snap-align: start;">
         <div style="position: absolute; inset: 0; backdrop-filter: blur(200px); display: flex; flex-direction: column; padding: 2rem;">
           <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; filter: blur(5px);">Premium</h3>
           <p style="font-size: 2.5rem; font-weight: 700; filter: blur(5px);">₹000.00</p>
@@ -273,7 +248,7 @@
             Revealing Soon
           </button>
         </div>
-      </div> <div class="bg-white text-black p-8 h-96 w-80 shadow-lg relative flex-shrink-0" style="scroll-snap-align: start;">
+      </div> <div class="bg-white  pricing-card text-black p-8 h-96 w-80 shadow-lg relative flex-shrink-0" style="scroll-snap-align: start;">
         <div style="position: absolute; inset: 0; backdrop-filter: blur(200px); display: flex; flex-direction: column; padding: 2rem;">
           <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; filter: blur(5px);">Premium</h3>
           <p style="font-size: 2.5rem; font-weight: 700; filter: blur(5px);">₹000.00</p>
@@ -315,7 +290,7 @@
 </div>
 
 
-
+<!-- Conclave -->
 <div class="marquee-containerr">
   <div class="marqueee">
       National Conclave National Conclave National Conclave National Conclave National Conclave National Conclave
@@ -323,7 +298,7 @@
 </div>
 
 
-
+<!-- Posters -->
 <div class="w-screen flex flex-col items-center justify-center">
   <div class="w-4/5  flex flex-col items-start">
     <h1 class="text-6xl mb-14 font-bold">Check out the best moments from past events</h1>
@@ -389,8 +364,8 @@
 
 <!-- Footer -->
 <div style="width: 100%; background-color: black; height: auto; padding-top: 4rem; padding-bottom: 4rem; display: flex; flex-direction: column; align-items: center;">
-  <img src="Union.png" id="icon" alt="logo">
-  <img src="Frame 429.png" id="robot" alt="logo">
+  <img src="img/Union.png" id="icon" alt="logo">
+  <img src="img/Frame 429.png" id="robot" alt="logo">
 </div>
 
 
@@ -399,19 +374,7 @@
 
 
 
- <script>
-    const lenis = new Lenis({
-      duration: 1.2, 
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-      smooth: true, 
-    });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  </script>
+  <script src="Script.js"></script>
 </body>
 </html>
