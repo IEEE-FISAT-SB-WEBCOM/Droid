@@ -185,7 +185,12 @@ html,body{
   height:900;
 }
 
-
+@media screen and (max-width: 518px) {
+  .posters
+  {
+    margin-left: 50px;
+  }
+}
 
 @media (max-width: 768px) {
   #herorobo{
