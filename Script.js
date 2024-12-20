@@ -160,7 +160,7 @@ function setupMarquee() {
       repeat: -1,
       defaults: {
         ease: "none",
-        duration: 20
+        duration: 10
       }
     });
   
@@ -170,7 +170,7 @@ function setupMarquee() {
   
     tl.to(marquee, {
       x: -contentWidth,
-      duration: 20,
+      duration: 10,
       ease: "none",
       repeat: -1
     });
