@@ -93,6 +93,12 @@ h1{
   grid-row: 3;
 }
 
+
+
+
+
+
+
 /* Mobile Layout */
 @media screen and (max-width: 768px) {
   .title {
