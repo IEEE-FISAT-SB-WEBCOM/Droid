@@ -38,6 +38,11 @@ h1{
   min-width: 100%;
 }
 
+#date{
+  padding: 15px;
+   border: 2px solid #ff570c;
+}
+
 .logo-img {
   height: 50px;
   width: auto;
@@ -108,8 +113,12 @@ h1{
 
 /* Mobile Layout */
 @media screen and (max-width: 768px) {
+  #date{
+    padding: 4px;
+     border: 2px solid #ff570c;
+  }
   #herorobo{
-    top: 250px;
+    top: 290px;
     height: 200px;
     width: 200px;
   }
@@ -231,34 +240,6 @@ h1{
   }
 }
 
-@media (max-width: 768px) {
-  #herocolconclave{
-    letter-spacing: 0;
-    font-size: small;
-  }
-  #herorobo{
-    top: 350px;
-    width:100;
-    height:100;
-  }
-  #heroicon{
-    width: auto; 
-    height: auto;
-  }
-  
-
-
-  #icon{
-    width: 200px;
-    height: 150px;
-    bottom: 100px;
-  }
-  #robot {
-    width: 400px;
-    height: 400px;
-    margin-bottom: 50px;
-  }
-}
 
 
 #hamburger-menu.active div:first-child {
@@ -332,19 +313,6 @@ h1{
 
   
 
-@media screen  and (max-width: 540px) {
-  #heroconclave{
-    letter-spacing: 2px;
-    font-size: small;
-  }
-  #herorobo{
-    top: 230px;
-    height: 350px;
-    width: 350px;
-  }
-
-  
-}
 
 @media screen  and (max-width: 380px) {
   #heroconclave{
@@ -358,4 +326,142 @@ h1{
   }
 
   
+}
+
+
+
+
+@media (max-width: 344px) {
+  #herorobo{
+    top: 350px;
+    width:100;
+    height:100;
+  }
+}
+
+
+
+@media (min-width: 600) and (max-width: 768px) {
+  #herocolconclave{
+    letter-spacing: 0;
+    font-size: small;
+  }
+  #herorobo{
+    top: 50px;
+    width:100;
+    height:100;
+  }
+  #heroicon{
+    width: auto; 
+    height: auto;
+  }
+  
+
+
+  #icon{
+    width: 200px;
+    height: 150px;
+    bottom: 100px;
+  }
+  #robot {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 50px;
+  }
+}
+
+
+
+@media screen and (max-width: 913px) {
+  #herocolconclave{
+    letter-spacing: 0 !important;
+    font-size: small;
+  }
+  #herorobo{
+    top: 1000px;
+    width:100;
+    height:100;
+  }
+  #heroicon{
+    width: auto; 
+    height: auto;
+  }
+  
+
+
+  #icon{
+    width: 200px;
+    height: 150px;
+    bottom: 100px;
+  }
+  #robot {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen  and (max-width: 540px) {
+  #heroconclave{
+    letter-spacing: 2px;
+    font-size: small;
+  }
+  #herorobo{
+    top: 230px;
+    height: 300px;
+    width: 300px;
+  }
+
+  
+}
+
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+  #herorobo {
+    top: 180px; 
+    height: 400px;
+    width: 400px;
+  }
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 540px) {
+  #heroconclave {
+    letter-spacing: 2px;
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #heroconclave {
+    letter-spacing: 0;
+    font-size: x-small;
+  }
+  #herorobo {
+    top: 280px;
+   
+  }
+}
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #herorobo {
+    top: 270px; /* Adjust as needed */
+    height: 400px;
+    width: 400px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  #date{
+    padding: 3px;
+  }
+
+  #herorobo{
+    top: 250px !important;
+    width:30;
+    height:30;
+  }
 }
