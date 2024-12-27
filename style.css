@@ -306,9 +306,19 @@ h1{
 
 @media screen  and (max-width: 540px) {
   #herorobo{
-    top: 170px;
+    top: 220px;
     height: 350px;
     width: 350px;
+  }
+
+  
+}
+
+@media screen  and (max-width: 380px) {
+  #herorobo{
+    top: 220px;
+    height: 250px;
+    width: 250px;
   }
 
   
