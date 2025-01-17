@@ -6,7 +6,6 @@ html,body{
 
 #herorobo{
   position: absolute;
-  top: 180px;
 }
 
 h1{
@@ -231,7 +230,7 @@ h1{
 }
 
 #herorobo{
-  top: 220px;
+  top: 420px;
   width:450;
   height:450;
 }
@@ -385,8 +384,8 @@ h1{
     font-size: small;
   }
   #herorobo{
-    top: 1000px;
-    width:100;
+    top: 400px;
+    width: 500px;
     height:100;
   }
   #heroicon{
@@ -414,7 +413,7 @@ h1{
     font-size: small;
   }
   #herorobo{
-    top: 230px;
+    top: 380px;
     height: 300px;
     width: 300px;
   }
@@ -424,9 +423,9 @@ h1{
 
 @media screen and (min-width: 820px) and (max-width: 1180px) {
   #herorobo {
-    top: 180px; 
+    top: 380px; 
     height: 400px;
-    width: 400px;
+    width: 500px;
   }
 }
 
@@ -444,7 +443,7 @@ h1{
     font-size: x-small;
   }
   #herorobo {
-    top: 280px;
+    top: 380px;
    
   }
 }
@@ -454,9 +453,9 @@ h1{
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   #herorobo {
-    top: 270px; /* Adjust as needed */
+    top: 370px; /* Adjust as needed */
     height: 400px;
-    width: 400px;
+    width: 500px;
   }
 }
 
@@ -467,8 +466,12 @@ h1{
   }
 
   #herorobo{
-    top: 250px !important;
+    top: 380px !important;
     width:30;
     height:30;
   }
+}
+#herorobo
+{
+  margin: 0;
 }
