@@ -58,6 +58,10 @@ h1{
   margin-bottom: 4rem;
   padding-bottom: 36px;
 }
+.ticket
+{
+  z-index: 2;
+}
 
 /* Desktop Layout */
 .workshop-layout {
