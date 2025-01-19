@@ -146,11 +146,6 @@ h1{
   object-fit: cover;
   object-position: center;
 }
-.raw-reg
-{
-  display: none;
-}
-
 
 /* Mobile Layout */
 @media screen and (max-width: 768px) {
@@ -207,6 +202,7 @@ h1{
   }
   .raw-reg
   {
+    display: block;
     background-color:#ff570c ;
     width: 50%;
     text-align: center;
@@ -215,10 +211,6 @@ h1{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-  }
-  .raw-reg:hover
-  {
-    
   }
   .img-container {
     display: none;
