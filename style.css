@@ -258,7 +258,10 @@ h1{
 #Pricing{
   padding:20px 0;
 }
-
+.pricing-card
+{
+  opacity: 1 !important;
+}
 
 
 .posters {
@@ -525,8 +528,8 @@ h1{
     font-size: x-small;
   }
   #herorobo {
-    top: 380px;
-   
+    top: 320px;
+   width: 380px;
   }
 }
 
@@ -549,8 +552,8 @@ h1{
 
   #herorobo{
     top: 380px !important;
-    width:30;
-    height:30;
+    width:300px;
+    height:230px;
   }
 }
 #herorobo
