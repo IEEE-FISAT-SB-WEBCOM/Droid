@@ -218,18 +218,27 @@ document.addEventListener('click', (e) => {
     menuOverlay.classList.remove('active');
   }
 });
-function handleMobileView() {
-  const registerLink = document.querySelector('.raw-reg');
-  const regItem =document.querySelector(".register-item") ;
-  const isMobile = window.matchMedia('(max-width: 768px)'); 
+document.addEventListener('DOMContentLoaded', () => {
+  function handleMobileView() {
+    const registerLink = document.querySelector('.raw-reg');
+    const regItem = document.querySelector('.register-item');
+    const isMobile = window.matchMedia('(max-width: 768px)'); 
 
-  if (isMobile.matches) {
-    registerLink.style.display = 'block'; 
-    regItem.style.display = 'none';
-  } else {
-    registerLink.style.display = 'none'; 
-    regItem.style.display = 'flex';
+    if (!registerLink || !regItem) {
+      console.error('Elements not found.');
+      return;
+    }
+
+    if (isMobile.matches) {
+      registerLink.style.display = 'block';
+      regItem.style.display = 'none';
+    } else {
+      registerLink.style.display = 'none';
+      regItem.style.display = 'flex';
+    }
   }
-}
-window.addEventListener('resize', handleMobileView);
-handleMobileView();
+
+  window.addEventListener('resize', handleMobileView);
+  handleMobileView();
+});
+
