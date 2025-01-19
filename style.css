@@ -82,7 +82,17 @@ h1{
   font-size: 1.5rem;
   height: 300px;
 }
-
+.register-item {
+  background-color: black;
+  /* padding: 1rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 300px;
+}
 .workshop-item img {
   width: 100%;
   height: 100%;
@@ -115,9 +125,27 @@ h1{
   grid-row: 3;
 }
 
-
-
-
+.raw_logo
+{
+  width: 300px;
+}
+.raw-item {
+  background-color: #f97316;
+  /* padding: 1rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 300px;
+}
+.raw-item img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 
 
 
@@ -165,7 +193,30 @@ h1{
     flex-shrink: 0;
     scroll-snap-align: start;
   }
-
+  .raw_logo
+  {
+    width: 200px;
+  }
+  .raw-item {
+    min-width: 280px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+  .raw-reg
+  {
+    background-color:#ff570c ;
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .raw-reg:hover
+  {
+    
+  }
   .img-container {
     display: none;
   }
