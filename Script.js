@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+});
+
 const lenis = new Lenis({
     duration: 1.2, 
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
