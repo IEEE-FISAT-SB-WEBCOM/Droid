@@ -261,8 +261,18 @@ h1{
     grid-row: unset;
   }
 }
-
-
+@media screen and (max-width: 468px) {
+  .raw-reg
+  {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .raw-reg
+  {
+    font-size: 1rem;
+  }
+}
 #Pricing{
   padding:20px 0;
 }
